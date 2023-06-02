@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <h2><center>My To-Do List</center></h2><br>
+      <input type="text" id="myinput" placeholder="Title.....">
+      <button onclick="newelem()" class="AddBtn">Add</button>
+    </div>
+    <ul id="list">
+     
+    </ul>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      var listItems = document.querySelectorAll('#list li');
+      listItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+          this.classList.toggle('completed');
+        });
+      });
+    });
+    
+    function createCloseButton(item) {
+      var closeButton = document.createElement('span');
+      closeButton.innerHTML = '&times;';
+      closeButton.classList.add('close');
+      closeButton.addEventListener('click', function() {
+        var li = this.parentElement;
+        li.style.display = 'none';
+      });
+      item.appendChild(closeButton);
+    }
+    
+    function newelem() {
+      var inputValue = document.getElementById("myinput").value;
+      if (inputValue === '') {
+        alert("Please enter a task!");
+      } else {
+        var li = document.createElement("li");
+        li.textContent = inputValue;
+        createCloseButton(li);
+        li.addEventListener('click', function() {
+          this.classList.toggle('completed');
+        });
+        document.getElementById("list").appendChild(li);
+      }
+      document.getElementById("myinput").value = "";
+    }
+    
+    function toggleListCompleted() {
+      var list = document.getElementById("list");
+      list.classList.toggle("completed");
+    }
+    </script>
+    
+</body>
+</html>
