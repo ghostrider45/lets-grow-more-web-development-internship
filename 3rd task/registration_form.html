@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <script src="registration.js"></script>
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1><center>Registration Form</center></h1>
+        <hr>
+        <form onsubmit="return false;">
+            <label for="name1"><b>Name</b></label>
+            <input type="text" id="name1" name="name1"><br>
+            
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" name="email">
+            <br>
+            <label for="website"><b>Website</b></label></label>
+            <input type="text" id="website" name="website">
+            <br>
+            <label for="image"><b>Image link</b></label>
+            <input type="text" id="image" name="image">
+            <br>
+            <label><b>Gender</b></label><br><br>
+            <input type="radio" id="gender-male" name="gender" value="Male">
+            <label for="gender-male">Male</label>
+            <input type="radio" id="gender-female" name="gender" value="Female">
+            <label for="gender-female">Female</label>
+            <br><br>
+            <label for="skills"><b>Skills</b></label>
+            <br><br>
+            <input type="checkbox" id="HTML" value="HTML">
+            <label for="html"> html</label>
+            <input type="checkbox" id="CSS" value="CSS">
+            <label for="CSS">CSS</label>
+            <input type="checkbox" id="JS" value="JS">
+            <label for="JS"> JS</label>
+            <br><br>
+            <button type="submit" onclick="getData()">Submit</button>
+        </form>
+    </div>
+    <hr>
+    <h1><center>Student Details</center></h1>
+    <center>
+    <div class="data1">
+       
+    </div></center>
+    <hr>
+</body>
+</html>
+

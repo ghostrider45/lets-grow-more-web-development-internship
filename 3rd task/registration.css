@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+   background-image: url(https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+}
+
+input[type="text"],
+input[type="email"] {
+    margin-left: 20px;
+    width: 350px;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+p{
+    line-height: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+img{
+    height: 200px;
+    width: 300px;
+    margin-right: -890px;
+    margin-top: -300px;
+}
